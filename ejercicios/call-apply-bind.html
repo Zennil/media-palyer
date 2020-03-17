@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <title>
+        Function.prototype.call, Function.prototype.apply, Function.prototype.bind
+    </title>
+</head>
+
+<body>
+    <a href="/ejercicios/">Go back</a>
+    <p><em>Abre la consola</em></p>
+
+    <ul>
+        <li><button class="call-to-action">Aprender</button></li>
+        <li><button class="call-to-action">Aprender Plus</button></li>
+        <li><button class="call-to-action">¡Perrote Mamalon!</button></li>
+    </ul>
+
+    <script>
+        // Establece 'this' usando 'call'
+        function saludar() {
+            console.log('hey soy: ', this.name, this.lastName);
+        }
+        const zack = {
+            name: 'Zack',
+            lastName: 'Fair'
+        }
+        saludar.call(zack);
+
+
+        // Establece 'this' usando 'call' y pasar argumentos a la función
+        function walk(distancia, direccion) {
+            console.log(`${this.name} camina ${distancia} metros hacia ${direccion}`);
+        }
+        walk.call(zack, 300, "Arriba");
+
+        // Establece 'this' usando 'apply' y pasar argumentos a la función
+        walk.apply(zack, [200, 'el horizonte']);
+
+        // Establecer 'this' en una nueva función usando 'bind'
+        const cloud = {
+            name: 'Cloud',
+            lastName: 'Strife'
+        }
+        const cloudSayHell = saludar.bind(cloud);
+        cloudSayHell();
+
+        const cloudWalk = walk.bind(cloud, 666);
+        cloudWalk('Adelante');
+
+        // Cuando es útil usar uno de estos métodos
+        const buttons = document.getElementsByClassName('call-to-action');
+        // buttons.forEach(button => {
+        //     button.onclick = () => alert('Boton');
+        // });
+
+        Array.prototype.forEach.call(buttons, button => {
+            button.onclick = () => alert('Boton');
+        });
+    </script>
+</body>
+
+</html>
