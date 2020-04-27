@@ -7,7 +7,7 @@ const btnMuted = document.getElementById('btnMuted');
 
 const player = new MediaPlayerr({
     elem: video, plugins: [
-        // new AutoPlay()
+        new AutoPlay()
     ]
 });
 
