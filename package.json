@@ -1,0 +1,16 @@
+{
+  "name": "media-player",
+  "version": "1.0.0",
+  "description": "Proyecto del Curso Profecsional de ",
+  "license": "MIT",
+  "author": "Armando Alonso Zenil <szenil.11@gmail.com>",
+  "keywords": [
+    "zenil"
+  ],
+  "scripts": {
+    "start": "live-server"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}

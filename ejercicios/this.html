@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>THIS</title>
+</head>
+
+<body>
+    <a href="/ejercicios/">Go back</a>
+    <p><em>Abre la consola</em></p>
+
+    <h3>
+        <code>this</code> se refiere a un objeto. Ese objeto es el que actualmente
+        está ejecutando un pedazo de código.
+    </h3>
+
+    <script>
+        // this en el scope global
+        console.log('this global: ', this);
+
+        // this en el scope de una función
+        function whoIsThis() {
+            return this;
+        }
+        console.log('this en una funcion: ', whoIsThis());
+
+        // this en el scope de una función en strict mode
+        function whoIsThisStric() {
+            "use strict";
+            return this;
+        }
+        console.log('this en una funcion en modo strict: ', whoIsThisStric());
+
+        // this en el contexto de un objeto
+        const person = {
+            nombre: 'Poe',
+            saludar: function () {
+                return 'Hola soy: ' + this.nombre;
+            }
+        };
+        console.log('this desde un Objeto: ', person.saludar());
+
+        // this cuando sacamos a un a función de un objeto
+        const accion = person.saludar;
+        console.log('this fuera de un objeto', accion());
+
+        // this en el contexto de una clase
+        function Person(name) {
+            this.name = name;
+        }
+        Person.prototype.saludar = function () {
+            return 'Mi nombre es: ' + this.name;
+        }
+        const angela = new Person('Angela');
+        console.log('this en el contexto de una clase (sobre la instancia)', angela.saludar());
+
+    </script>
+</body>
+
+</html>
