@@ -57,3 +57,26 @@ function fullName(firtsName: string, lastName?: string, comodin: string = 'Smith
 }
 const wilde = fullName('Oscar');
 console.log(wilde);
+
+// Interfaces
+interface Rectangulo {
+    ancho: number;
+    alto: number;
+    color?: Color;
+}
+const rec: Rectangulo = {
+    alto: 4,
+    ancho: 6,
+    color: Color.Amarrillo
+}
+
+function area(r: Rectangulo) {
+    return r.alto * r.ancho;
+}
+const areaRec = area(rec);
+console.log(areaRec);
+
+rec.toString = function () {
+    return this.color ? `Un rectangulo ${this.color}` : `Un rectangulo`;
+}
+console.log(rec.toString());
