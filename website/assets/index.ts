@@ -1,7 +1,7 @@
-import MediaPlayerr from './MediaPlayerr';
-import AutoPlay from './plugins/AutoPlay';
-import AutoPause from './plugins/AutoPause';
-import Ads from './plugins/Ads';
+import MediaPlayerr from '@zenil/mediapalyer';
+import AutoPlay from '@zenil/mediapalyer/lib/plugins/AutoPlay';
+import AutoPause from '@zenil/mediapalyer/lib/plugins/AutoPause';
+import Ads from '@zenil/mediapalyer/lib/plugins/Ads';
 
 const video = document.querySelector('video');
 
