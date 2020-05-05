@@ -35,7 +35,7 @@ _Menciona las herramientas que utilizaste para crear tu proyecto_
 
 ## Licencia 📄
 
-Este proyecto está bajo la Licencia MIT - mira el archivo [LICENSE](LICENSE.md) para mas detalles
+Este proyecto está bajo la Licencia MIT - mira el archivo [LICENSE](LICENSE) para mas detalles
 
 ## Expresiones de Gratitud 🎁
 
